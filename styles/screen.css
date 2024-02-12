@@ -1,7 +1,7 @@
 body {
     font-family: Helvetica, sans-serif;
     color: #EAE8FF;
-    background: #2D3142;
+    background: var(--background-color);
     padding: 0 40px;
     text-align: center;
 }
@@ -10,7 +10,7 @@ nav {
     margin: 40px auto 0 auto;
     width: 250px;
     border-radius: 50px;
-    background: #212431;
+    background: var(--content-color);
 }
 
 nav ul {
@@ -47,4 +47,88 @@ h1 strong {
 
 img.about {
     opacity: 0.5;
+}
+
+/* ##### Changes ##### */
+
+footer{
+    position:fixed;
+    bottom: 0;
+    right:0;
+    transform: translate(-50%, -50%);
+}
+
+:root{
+    --planet-size:80px;
+    --sun-size: 200px;
+    --content-color: #212431;
+    --background-color: #2D3142;
+    --hover-color: #424863;
+}
+
+
+/* Planet Content */
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.planets{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    width: 80vw;
+}
+
+
+/* Individual Planets */
+.planet{
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--content-color);
+    border-radius: 20px;
+}
+
+
+.planet p{
+    margin-top: 0px;
+}
+
+.planet:hover{
+    background: var(--hover-color);
+}
+
+
+/* The Sun */
+.planet.Sun{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.planet.Sun h2{
+    font-size: 2.5em;
+}
+.planet.Sun p{
+    font-size: 1.25em;
+}
+
+
+/* Planet Circles */
+.circle {
+    width:var(--planet-size);
+    height:var(--planet-size);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.circle.Sun{
+    width:var(--sun-size);
+    height:var(--sun-size);
 }

@@ -3,5 +3,17 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Planetary <strong>Playing Cards</strong></h1>
+<main>
+<div class="planets">
+    {% planet 'Sun' 'Type G2V' 'yellow' %}
+    {% planet 'Mercury' '0.4 AU' '#1a1a1a' %}
+    {% planet 'Venus' '0.7 AU' '#e3bb76' %}
+    {% planet 'Earth' '1.0 AU' '#9fc164' %}
+    {% planet 'Mars' '1.5 AU' '#993d00' %}
+    {% planet 'Jupiter' '5.2 AU' '#b07f35' %}
+    {% planet 'Saturn' '9.6 AU' '#b08f36' %}
+    {% planet 'Uranus' '19.2 AU' '#5580aa' %}
+    {% planet 'Neptune' '30.0 AU' '#274687' %}
+</div>
+</main>
